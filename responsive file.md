@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome - Landing Page</title>
+  <title>Landing Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * {
@@ -14,53 +14,21 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       line-height: 1.6;
-      background-color: #f5f8fc;
+      background-color: #f8f9fc;
       color: #333;
     }
 
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 20px;
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: white;
+    a {
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+      color: inherit;
     }
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
+    /* Hero Section */
     .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 80vh;
-      text-align: center;
-      background: linear-gradient(to right, #0066cc, #003366);
+      background: linear-gradient(to right, #4a90e2, #1455a3);
       color: white;
-      padding: 20px;
+      padding: 60px 20px;
+      text-align: center;
     }
 
     .hero h1 {
@@ -71,70 +39,118 @@
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 25px;
+      max-width: 600px;
+      margin-inline: auto;
     }
 
-    .btn {
-      padding: 12px 25px;
+    .cta-button {
       background-color: white;
-      color: #004080;
+      color: #1455a3;
+      padding: 12px 25px;
       font-weight: bold;
-      text-decoration: none;
       border-radius: 5px;
-      transition: background 0.3s ease;
+      display: inline-block;
+      transition: background 0.3s;
     }
 
-    .btn:hover {
-      background-color: #e0e0e0;
-    }
-
-    footer {
+    .cta-button:hover {
       background-color: #f0f0f0;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
     }
 
-    /* Responsive styles */
-    @media (max-width: 768px) {
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 60px 20px;
+      background-color: #ffffff;
+    }
+
+    .feature {
+      flex: 1 1 300px;
+      max-width: 300px;
+      margin: 15px;
+      background: #f5f7fa;
+      border-radius: 10px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .feature img {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      color: #1455a3;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer p, footer a {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin: 5px 0;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Responsive Headline Size */
+    @media (max-width: 600px) {
       .hero h1 {
         font-size: 2rem;
       }
 
-      nav {
-        flex-direction: column;
-        margin-top: 10px;
-      }
-
-      nav a {
-        margin: 5px 0;
+      .hero p {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with navigation -->
-  <header>
-    <div class="nav-container">
-      <div class="logo">MyBrand</div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
   <!-- Hero Section -->
-  <section class="hero" id="home">
-    <h1>Welcome to My World</h1>
-    <p>Your one-stop spot for everything creative, smart and impactful.</p>
-    <a href="#contact" class="btn">Get in Touch</a>
+  <section class="hero">
+    <h1>Discover Your Perfect Workflow</h1>
+    <p>Our tool helps you streamline tasks, boost productivity, and save time — all in one smart platform.</p>
+    <a href="#signup" class="cta-button">Sign Up</a>
   </section>
 
-  <!-- Footer -->
-  <footer id="contact">
-    <p>Contact me: ahmed.saroke@example.com | IG: @ahmed_saroke</p>
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/4a90e2/lightning-bolt.png" alt="Fast">
+      <h3>Fast & Efficient</h3>
+      <p>Speed up your daily tasks with our intuitive automation tools and blazing-fast interface.</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/4a90e2/cloud.png" alt="Cloud">
+      <h3>Cloud-Based</h3>
+      <p>Access your data anywhere, anytime. All your work is saved securely in the cloud.</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/4a90e2/lock--v1.png" alt="Secure">
+      <h3>Secure & Private</h3>
+      <p>Built with strong encryption and privacy-first design to keep your data safe.</p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>📧 Email: support@example.com</p>
+    <p>📞 Phone: +234-801-234-5678</p>
+    <p>🔗 Follow us: <a href="https://instagram.com/yourbrand" target="_blank">@yourbrand</a></p>
+    <p>© 2025 YourBrand. All rights reserved.</p>
   </footer>
 
 </body>
